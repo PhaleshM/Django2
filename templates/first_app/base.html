@@ -1,0 +1,48 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--stylesheet-->
+    <link rel="stylesheet" href='{% static 'first_app/css/stylesheet2.css' %}'>
+    <!--favicon-->
+    <link rel='shortcut icon' href='{% static 'first_app/image/favicon.ico' %}'>
+
+     {% block headcontent %}
+    {% endblock headcontent %}
+    <title>
+        {% if title %}{{title}}{% else %}Welcome!{% endif %}
+    </title>
+</head>
+<body>
+    <div class='conatiner'align='center'>
+        <div class="div1">
+            <nav>
+                <img src="{% static 'first_app/image/starlogo.png' %}" alt="">
+                <a href="{% url 'first-app-home' %}" class="btn btn-light" tabindex="-1" role="button" >Home</a>
+                <!-- aria-disabled="true" -->
+                <a href="{% url 'first-app-about' %}" aria-disabled="true" class="btn btn-light" tabindex="-1" role="button" >About</a>
+                <a href="{% url 'first-app-privacy' %}" class="btn btn-light" tabindex="-1" role="button" >Privacy</a>
+
+            </nav>
+            <main>
+                <p id="p">
+                    {% block maincontent %}
+
+                    {% endblock maincontent %}  
+                </p>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <a href="https://www.facebook.com" class="fa fa-facebook" title="Facebook"></a>
+        <a href="https://twitter.com" class="fa fa-twitter" title="Twitter"></a>
+        <a href="https://www.linkedin.com/in" class="fa fa-linkedin" title="LinkedIn"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/*google font raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,200;1,500;1,700&display=swap');
+/*
+font-family: 'Raleway', sans-serif;
+*/
+/*google font roboto slab*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600&display=swap');
+/*
+font-family: 'Roboto Slab', serif;
+*/
+/*google font jetbrains mono*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap');
+/*
+font-family: 'JetBrains Mono', monospace;
+*/
+body{
+    text-align: center;
+    text-decoration: white wavy ;
+    font-family: 'Roboto Slab', serif;
+    background: radial-gradient(#485563,#29323c) fixed;
+}
+footer{
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    padding: 0% 4%;
+    background-color: black;
+    bottom: 0;
+    font-size: 18px;
+}
+img{
+    position: relative;
+    margin: 20px 20px 20px 20px;
+    border: gold solid 2px;  
+}
+nav{
+    font-size: 20px;
+    z-index: 100;
+    text-align: left;
+    position: relative;
+    background: rgb(0, 0, 0) ;
+    color: rgb(255, 255, 255);
+ 
+}
+.nava{
+    text-decoration: white wavy ;
+}
+
